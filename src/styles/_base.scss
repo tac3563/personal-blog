@@ -1,0 +1,35 @@
+@use "colours" as *;
+@use "typography" as *;
+
+h1, h2, h3, h4, h5, h6 {
+  color: $neutral-700;
+}
+
+h1 {
+  @include fontStyles('preset-1');
+}
+
+h2 {
+  @include fontStyles('preset-2');
+}
+
+h3 {
+  @include fontStyles('preset-3');
+}
+
+h4 {
+  @include fontStyles('preset-4');
+}
+
+h5 {
+  @include fontStyles('preset-5');
+}
+
+h6 {
+  @include fontStyles('preset-6');
+}
+
+li, p {
+  @include fontStyles('preset-7');
+  color: $neutral-600;
+}

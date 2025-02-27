@@ -6,11 +6,6 @@ header {
       list-style: none;
       display: flex;
       gap: 12px;
-
-      li {
-        @include fontStyles('preset-1');
-        color: blue;
-      }
     }
   }
 }
