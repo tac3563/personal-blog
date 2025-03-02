@@ -1,5 +1,6 @@
 @use "colours" as *;
 @use "typography" as *;
+@use "spacing" as *;
 
 h1, h2, h3, h4, h5, h6 {
   color: $neutral-700;
@@ -29,7 +30,15 @@ h6 {
   @include fontStyles('preset-6');
 }
 
-li, p {
+li, p, a {
   @include fontStyles('preset-7');
   color: $neutral-600;
+}
+
+body {
+  max-width: $container-max-width;
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+  background: $neutral-100;
 }

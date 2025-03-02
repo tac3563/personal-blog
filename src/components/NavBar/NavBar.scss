@@ -1,11 +1,47 @@
-header {
-  nav {
-    background-color: red;
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
 
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 12px;
+header {
+  display: flex;
+  background-color: $neutral-0;
+  border-radius: $radius-10;
+  margin: $spacing-250 0 0;
+
+  nav {
+    width: 100%;
+
+      .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: $spacing-075;
+
+        .profile-photo {
+          max-width: $icon-max-width;
+          width: 100%;
+          height: auto
+        }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: $spacing-300;
+        margin: 0;
+
+        li {
+          a {
+            @include fontStyles('preset-8');
+            color: $neutral-600;
+            text-decoration: none;
+
+            &.active {
+              color: $neutral-700;
+              text-decoration: underline 3px solid $blue-500;
+            }
+          }
+        }
+      }
     }
   }
 }
