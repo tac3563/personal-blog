@@ -1,0 +1,33 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
+
+#main-footer {
+  .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $spacing-200 0 $spacing-300 0;
+
+    p {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      gap: $spacing-200;
+      display: flex;
+      margin: 0;
+
+      li {
+        a {
+          img {
+            max-width: $icon-max-width;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}

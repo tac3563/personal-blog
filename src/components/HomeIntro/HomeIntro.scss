@@ -1,10 +1,9 @@
 @use "../../../src/styles/spacing" as *;
 @use "../../../src/styles/colours" as *;
-@use "../../../src/styles/typography" as *;
 
 .home-intro {
   border-bottom: solid 1px $neutral-200;
-  margin: $spacing-400 0 $spacing-400 0;
+  margin: $spacing-400 0 0;
   padding: 0 0 $spacing-400 0;
 
   h2, p {
