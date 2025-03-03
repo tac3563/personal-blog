@@ -35,6 +35,30 @@ li, p, a {
   color: $neutral-600;
 }
 
+html {
+  position: relative;
+
+  &:before, &:after {
+    content: url("../../src/assets/images/pattern-light.svg");
+    position: absolute;
+    display: none;
+
+    @media (min-width: 1129px) {
+      display: block;
+    }
+  }
+
+  &:before {
+    top: 225px;
+    left: -210px;
+  }
+
+  &:after {
+    top: 0;
+    right: -210px;
+  }
+}
+
 body {
   max-width: $container-max-width;
   width: 100%;
