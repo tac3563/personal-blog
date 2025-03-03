@@ -41,4 +41,11 @@ body {
   margin: auto;
   min-height: 100vh;
   background: $neutral-100;
+
+  #main-content {
+    border: solid 1px $neutral-200;
+    border-top: none;
+    padding: $spacing-200 $spacing-150 $spacing-100;
+    margin: 0 $spacing-150 0;
+  }
 }

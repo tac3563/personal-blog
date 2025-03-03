@@ -1,0 +1,28 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
+
+.home-intro {
+  border-bottom: solid 1px $neutral-200;
+  margin: $spacing-400 0 $spacing-400 0;
+  padding: 0 0 $spacing-400 0;
+
+  h2, p {
+    margin: 0 0 $spacing-300 0;
+  }
+
+  .home-intro__socials {
+    display: flex;
+    gap: $spacing-150;
+
+     a {
+      display: flex;
+
+      .github-logo, .linkedin-logo {
+        max-width: $icon-max-width;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
