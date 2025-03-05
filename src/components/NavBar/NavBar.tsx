@@ -1,6 +1,11 @@
 import "./NavBar.scss";
 
-export default function NavBar() {
+interface navBarProps {
+  activeMode: string;
+  handleClick: () => void;
+}
+
+export default function NavBar({ activeMode, handleClick }: navBarProps) {
   return (
     <header id="main-header">
       <nav>
@@ -25,7 +30,15 @@ export default function NavBar() {
             <li>
               <a href="/newsletter">Newsletter</a>
             </li>
-            <li>☀️</li>
+            {activeMode === "dark" ? (
+              <li className="light-dark-toggle" onClick={handleClick}>
+                🌛
+              </li>
+            ) : (
+              <li className="light-dark-toggle" onClick={handleClick}>
+                ☀️
+              </li>
+            )}
           </ul>
         </div>
       </nav>

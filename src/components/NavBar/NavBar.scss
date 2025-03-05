@@ -4,7 +4,7 @@
 
 header {
   display: flex;
-  background-color: $neutral-0;
+  background-color: var(--page-nav-background);
   border-radius: $radius-10;
   margin: $spacing-250 0 0;
 
@@ -29,15 +29,17 @@ header {
         gap: $spacing-300;
         margin: 0;
 
+        .light-dark-toggle {
+          cursor: pointer;
+        }
+
         li {
           a {
             @include fontStyles('preset-8');
-            color: $neutral-600;
             text-decoration: none;
 
             &.active {
-              color: $neutral-700;
-              text-decoration: underline 3px solid $blue-500;
+              text-decoration: underline 3px solid var(--blue-500);
             }
           }
         }

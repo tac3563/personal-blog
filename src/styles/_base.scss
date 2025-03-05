@@ -3,7 +3,7 @@
 @use "spacing" as *;
 
 h1, h2, h3, h4, h5, h6 {
-  color: $neutral-700;
+  color: var(--page-body-heading);
 }
 
 h1 {
@@ -32,7 +32,7 @@ h6 {
 
 li, p, a {
   @include fontStyles('preset-7');
-  color: $neutral-600;
+  color: var(--page-body-text);
 }
 
 html {
@@ -59,15 +59,20 @@ html {
   }
 }
 
-body {
-  max-width: $container-max-width;
+.page-container {
   width: 100%;
   margin: auto;
   min-height: 100vh;
-  background: $neutral-100;
+  background: var(--page-background);
+  display: flex;
+  justify-content: center;
+
+  .page-wrapper {
+    max-width: $container-max-width;
+  }
 
   #main-content {
-    border: solid 1px $neutral-200;
+    border: solid 1px var(--page-border);
     border-top: none;
     padding: $spacing-200 $spacing-150 $spacing-100;
     margin: 0 $spacing-150 0;

@@ -2,7 +2,7 @@
 @use "../../../src/styles/colours" as *;
 
 .home-intro {
-  border-bottom: solid 1px $neutral-200;
+  border-bottom: solid 1px var(--page-border);
   margin: $spacing-400 0 0;
   padding: 0 0 $spacing-400 0;
 
