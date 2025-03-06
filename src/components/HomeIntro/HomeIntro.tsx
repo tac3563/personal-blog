@@ -1,5 +1,7 @@
 import "./HomeIntro.scss";
 
+/* TODO: make home intro generic and reusable across pages */
+
 export default function HomeIntro() {
   return (
     <section className="home-intro">

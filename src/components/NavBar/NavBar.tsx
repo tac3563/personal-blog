@@ -1,4 +1,5 @@
 import "./NavBar.scss";
+import { Link } from "react-router-dom";
 
 interface navBarProps {
   activeMode: string;
@@ -17,18 +18,16 @@ export default function NavBar({ activeMode, handleClick }: navBarProps) {
           />
           <ul>
             <li>
-              <a className="active" href="#">
-                Home
-              </a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/newsletter">Newsletter</a>
+              <Link to="/newsletter">Newsletter</Link>
             </li>
             {activeMode === "dark" ? (
               <li className="light-dark-toggle" onClick={handleClick}>

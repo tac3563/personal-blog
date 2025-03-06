@@ -18,6 +18,8 @@
       display: flex;
 
         svg {
+          overflow: initial;
+
           > path {
             &:first-of-type {
               fill: var(--intro-social-icon-background);
