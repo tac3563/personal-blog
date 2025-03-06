@@ -17,11 +17,17 @@
      a {
       display: flex;
 
-      .github-logo, .linkedin-logo {
-        max-width: $icon-max-width;
-        width: 100%;
-        height: auto;
-      }
+        svg {
+          > path {
+            &:first-of-type {
+              fill: var(--intro-social-icon-background);
+            }
+
+            &:last-of-type {
+              fill: var(--intro-social-icon-foreground);
+            }
+          }
+        }
     }
   }
 }

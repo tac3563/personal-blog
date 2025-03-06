@@ -21,10 +21,14 @@
 
       li {
         a {
-          img {
+          svg {
             max-width: $icon-max-width;
             width: 100%;
             height: auto;
+
+            > path {
+              fill: var(--social-icon-background)
+            }
           }
         }
       }

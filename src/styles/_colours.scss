@@ -39,6 +39,9 @@ body {
   --page-body-heading: var(--neutral-700);
   --page-body-text: var(--neutral-600);
   --page-border: var(--neutral-200);
+  --social-icon-background: var(--neutral-600);
+  --intro-social-icon-foreground: var(--neutral-700);
+  --intro-social-icon-background: var(--neutral-0);
 }
 
 body {
@@ -48,6 +51,9 @@ body {
     --page-body-heading: var(--neutral-0);
     --page-body-text: var(--neutral-400);
     --page-border: var(--neutral-700);
+    --social-icon-background: var(--neutral-400);
+    --intro-social-icon-foreground: var(--neutral-0);
+    --intro-social-icon-background: var(--neutral-800);
   }
 }
 
