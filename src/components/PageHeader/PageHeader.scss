@@ -1,10 +1,11 @@
 @use "../../../src/styles/spacing" as *;
 @use "../../../src/styles/colours" as *;
 
-.home-intro {
+.page-header {
   border-bottom: solid 1px var(--page-border);
   margin: $spacing-400 0 0;
   padding: 0 0 $spacing-400 0;
+  transition: border-bottom-color ease .3s;
 
   h2, p {
     margin: 0 0 $spacing-300 0;

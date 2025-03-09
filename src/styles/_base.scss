@@ -2,6 +2,10 @@
 @use "typography" as *;
 @use "spacing" as *;
 
+body {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   transition: color .3s ease-in-out;
   color: var(--page-body-heading);
@@ -58,27 +62,5 @@ html {
   &:after {
     top: 0;
     right: -210px;
-  }
-}
-
-.page-container {
-  width: 100%;
-  margin: auto;
-  min-height: 100vh;
-  background: var(--page-background);
-  transition: background-color .3s ease-in-out;
-  display: flex;
-  justify-content: center;
-
-  .page-wrapper {
-    max-width: $container-max-width;
-  }
-
-  #main-content {
-    border: solid 1px var(--page-border);
-    transition: border-color .3s ease-in-out;
-    border-top: none;
-    padding: $spacing-200 $spacing-150 $spacing-100;
-    margin: 0 $spacing-150 0;
   }
 }

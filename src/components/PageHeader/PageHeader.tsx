@@ -14,7 +14,7 @@ export default function PageHeader({
   children,
 }: PageHeaderProps) {
   return (
-    <section className="home-intro">
+    <section className="page-header">
       <h2>{title}</h2>
 
       {children}

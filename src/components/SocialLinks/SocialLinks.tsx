@@ -2,7 +2,7 @@ import "./SocialLinks.scss";
 
 export default function SocialLinks() {
   return (
-    <div className="home-intro__socials">
+    <div className="page-header-socials">
       <div className="linkedin-logo">
         <a href="https://www.linkedin.com/" target="_blank">
           <svg

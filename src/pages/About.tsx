@@ -50,7 +50,7 @@ export default function About() {
           best work, so I thought I’d share it with you:
         </p>
       </PageHeader>
-      <Footer />;
+      <Footer />
     </>
   );
 }
