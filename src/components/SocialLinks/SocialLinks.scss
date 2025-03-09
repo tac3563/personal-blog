@@ -1,0 +1,25 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+
+.home-intro__socials {
+  display: flex;
+  gap: $spacing-150;
+
+  a {
+    display: flex;
+
+    svg {
+      overflow: initial;
+
+      > path {
+        &:first-of-type {
+          fill: var(--intro-social-icon-background);
+        }
+
+        &:last-of-type {
+          fill: var(--intro-social-icon-foreground);
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,16 @@
 import Footer from "../components/Footer/Footer.tsx";
-import HomeIntro from "../components/HomeIntro/HomeIntro.tsx";
+import PageHeader from "../components/PageHeader/PageHeader.tsx";
 
 export default function Blog() {
   return (
     <>
       <main>
-        <HomeIntro />
+        <PageHeader title="My Articles">
+          <p>
+            Below are all my recent blog posts. Click on any title to read the
+            full article.
+          </p>
+        </PageHeader>
         <Footer />
       </main>
     </>
