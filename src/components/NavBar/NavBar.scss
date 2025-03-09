@@ -3,6 +3,7 @@
 @use "../../../src/styles/typography" as *;
 
 header {
+  transition: background-color .3s ease-in-out;
   display: flex;
   background-color: var(--page-nav-background);
   border-radius: $radius-10;
