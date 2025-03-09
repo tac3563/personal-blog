@@ -12,38 +12,22 @@ export default function AnimatedRoutes() {
   return (
     <AnimatePresence mode={"wait"}>
       <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <PageWrapper>
-              <Home />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/blog"
-          element={
-            <PageWrapper>
-              <Blog />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/Newsletter"
-          element={
-            <PageWrapper>
-              <Newsletter />
-            </PageWrapper>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <PageWrapper>
-              <About />
-            </PageWrapper>
-          }
-        />
+        {[
+          { path: "/", Component: Home },
+          { path: "/blog", Component: Blog },
+          { path: "/about", Component: About },
+          { path: "/newsletter", Component: Newsletter },
+        ].map(({ path, Component }) => (
+          <Route
+            key={path}
+            path={path}
+            element={
+              <PageWrapper>
+                <Component />
+              </PageWrapper>
+            }
+          />
+        ))}
       </Routes>
     </AnimatePresence>
   );
