@@ -1,7 +1,13 @@
+import Footer from "../components/Footer/Footer.tsx";
+import HomeIntro from "../components/HomeIntro/HomeIntro.tsx";
+
 export default function Blog() {
   return (
     <>
-      <h2>My Articles</h2>
+      <main>
+        <HomeIntro />
+        <Footer />
+      </main>
     </>
   );
 }
