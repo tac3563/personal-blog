@@ -1,5 +1,6 @@
 import Footer from "../components/Footer/Footer.tsx";
 import PageHeader from "../components/PageHeader/PageHeader.tsx";
+import SingleBlogLinks from "../components/SingleBlogLinks/SingleBlogLinks.tsx";
 
 export default function Blog() {
   return (
@@ -11,6 +12,9 @@ export default function Blog() {
             full article.
           </p>
         </PageHeader>
+
+        <SingleBlogLinks />
+
         <Footer />
       </main>
     </>

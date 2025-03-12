@@ -1,19 +1,24 @@
 import Footer from "../components/Footer/Footer.tsx";
 import PageHeader from "../components/PageHeader/PageHeader.tsx";
+import { useParams } from "react-router-dom";
+import data from "../data/data.json";
 
 export default function SingleBlog() {
+  const { slug } = useParams();
+
+  const singlePost = data.find((post) => post.slug === slug);
+
+  if (!singlePost) {
+    return <h2>No posts found.</h2>;
+  }
+
   return (
     <>
-      <PageHeader title="Overcoming Imposter Syndrome as a New Developer">
-        <p className="post-meta">Published February 10, 2025</p>
-        <p>
-          Today, I want to open up about a topic that hits close to home for
-          many of us in tech—imposter syndrome. If you’ve ever felt like you
-          don’t belong or you’re not “good enough” as a developer, you’re
-          definitely not alone. Let’s dive into what imposter syndrome is, why
-          it happens, and how we can manage it.
-        </p>
+      <PageHeader title={singlePost.title}>
+        <p className="post-meta">{singlePost.publishedAt}</p>
+        <p>{singlePost.description}</p>
       </PageHeader>
+      <p>{singlePost.content}</p>
       <Footer />
     </>
   );

@@ -5,6 +5,7 @@ import Home from "../../pages/Home.tsx";
 import Blog from "../../pages/Blog.tsx";
 import Newsletter from "../../pages/Newsletter.tsx";
 import About from "../../pages/About.tsx";
+import SingleBlog from "../../pages/SingleBlog.tsx";
 
 export default function AnimatedRoutes() {
   const location = useLocation();
@@ -12,9 +13,16 @@ export default function AnimatedRoutes() {
   return (
     <AnimatePresence mode={"wait"}>
       <Routes location={location} key={location.pathname}>
+        <Route
+          index
+          element={
+            <PageWrapper>
+              <Home />
+            </PageWrapper>
+          }
+        />
+
         {[
-          { path: "/", Component: Home },
-          { path: "/blog", Component: Blog },
           { path: "/about", Component: About },
           { path: "/newsletter", Component: Newsletter },
         ].map(({ path, Component }) => (
@@ -28,6 +36,22 @@ export default function AnimatedRoutes() {
             }
           />
         ))}
+        <Route
+          path="/blog"
+          element={
+            <PageWrapper>
+              <Blog />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/blog/:slug"
+          element={
+            <PageWrapper>
+              <SingleBlog />
+            </PageWrapper>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
