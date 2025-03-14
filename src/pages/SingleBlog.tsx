@@ -2,6 +2,7 @@ import Footer from "../components/Footer/Footer.tsx";
 import PageHeader from "../components/PageHeader/PageHeader.tsx";
 import { useParams } from "react-router-dom";
 import data from "../data/data.json";
+import Markdown from "react-markdown";
 
 export default function SingleBlog() {
   const { slug } = useParams();
@@ -12,13 +13,21 @@ export default function SingleBlog() {
     return <h2>No posts found.</h2>;
   }
 
+  const formattedPublishedDate = new Date(
+    singlePost.publishedAt,
+  ).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <>
       <PageHeader title={singlePost.title}>
-        <p className="post-meta">{singlePost.publishedAt}</p>
-        <p>{singlePost.description}</p>
+        <p className="post-meta">{`Published: ${formattedPublishedDate}`}</p>
+        <p> {singlePost.description}</p>
       </PageHeader>
-      <p>{singlePost.content}</p>
+      <Markdown>{singlePost.content}</Markdown>
       <Footer />
     </>
   );

@@ -6,6 +6,19 @@ body {
   margin: 0;
 }
 
+hr {
+  border: none;
+  border-bottom: solid 1px var(--page-border);
+  height: 0;
+  margin: $spacing-300 0;
+}
+
+blockquote {
+  border-left: 4px var(--neutral-400) solid;
+  margin-left: 0;
+  padding-left: $spacing-300;
+}
+
 h1, h2, h3, h4, h5, h6 {
   transition: color .3s ease-in-out;
   color: var(--page-body-heading);
