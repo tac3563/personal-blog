@@ -3,6 +3,9 @@ import PageHeader from "../components/PageHeader/PageHeader.tsx";
 import { useParams } from "react-router-dom";
 import data from "../data/data.json";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark-dimmed.css";
 
 export default function SingleBlog() {
   const { slug } = useParams();
@@ -27,7 +30,9 @@ export default function SingleBlog() {
         <p className="post-meta">{`Published: ${formattedPublishedDate}`}</p>
         <p> {singlePost.description}</p>
       </PageHeader>
-      <Markdown>{singlePost.content}</Markdown>
+      <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+        {singlePost.content}
+      </Markdown>
       <Footer />
     </>
   );

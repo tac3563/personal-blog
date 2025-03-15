@@ -10,11 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@wooorm/starry-night": "^3.6.0",
     "framer-motion": "^12.4.10",
+    "hast-util-to-html": "^9.0.5",
+    "highlight.js": "^11.11.1",
     "motion": "^12.4.10",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-markdown": "^10.1.0"
+    "react-markdown": "^10.1.0",
+    "rehype-highlight": "^7.0.2",
+    "rehype-starry-night": "^2.2.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
