@@ -19,6 +19,13 @@ blockquote {
   padding-left: $spacing-300;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: $radius-12;
+  margin: 0 0 $spacing-300;
+}
+
 h1, h2, h3, h4, h5, h6 {
   transition: color .3s ease-in-out;
   color: var(--page-body-heading);
@@ -38,6 +45,7 @@ h3 {
 
 h4 {
   @include fontStyles('preset-4');
+  margin: $spacing-300 0 $spacing-200;
 }
 
 h5 {
@@ -52,6 +60,13 @@ li, p, a {
   @include fontStyles('preset-7');
   color: var(--page-body-text);
   transition: color .3s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline solid var(--blue-500) 3px;
+  }
 }
 
 html {

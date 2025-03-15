@@ -1,4 +1,5 @@
 import data from "../../data/data.json";
+import "./SingleBlogLinks.scss";
 import { Link } from "react-router-dom";
 
 export default function SingleBlogLinks() {
@@ -15,12 +16,12 @@ export default function SingleBlogLinks() {
         );
 
         return (
-          <div key={slug}>
-            <Link to={`/blog/${slug}`}>
-              <h2>{title}</h2>
-              <p>{formattedDate}</p>
-              <p>{description}</p>
+          <div className="single-blog-links" key={slug}>
+            <Link className="single-blog-links__link" to={`/blog/${slug}`}>
+              <h2 className="single-blog-links__title">{title}</h2>
             </Link>
+            <p className="single-blog-links__date">{formattedDate}</p>
+            <p className="single-blog-links__desc">{description}</p>
           </div>
         );
       })}

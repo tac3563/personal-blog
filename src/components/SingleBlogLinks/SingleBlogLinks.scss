@@ -1,0 +1,40 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/typography" as *;
+@use "../../../src/styles/colours" as *;
+
+.single-blog-links {
+  border-bottom: solid 1px var(--page-border);
+  margin: $spacing-250 0 0 0;
+  padding: 0 0 $spacing-250;
+
+  &:last-child {
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .single-blog-links__title {
+    @include fontStyles('preset-5');
+    margin: 0 0 $spacing-100;
+  }
+
+  .single-blog-links__link {
+    text-decoration: underline solid 1px;
+    text-decoration-color: transparent;
+    transition: .3s ease-in;
+
+    &:hover {
+      text-decoration-color: var(--neutral-700);
+      opacity: .7;
+    }
+  }
+
+  .single-blog-links__date {
+    @include fontStyles('preset-8');
+    font-style: italic;
+    margin: 0 0 $spacing-100;
+  }
+
+  .single-blog-links__desc {
+    margin: 0;
+  }
+}

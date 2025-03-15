@@ -10,4 +10,10 @@
   h2, p {
     margin: 0 0 $spacing-300 0;
   }
+
+  p {
+    &:last-child {
+      margin: 0
+    }
+  }
 }

@@ -1,5 +1,8 @@
 import Footer from "../components/Footer/Footer.tsx";
 import PageHeader from "../components/PageHeader/PageHeader.tsx";
+import workspaceImageDesktop from "../assets/images/image-workspace-large.webp";
+import workspaceImageMobile from "../assets/images/image-workspace-small.webp";
+import SocialLinks from "../components/SocialLinks/SocialLinks.tsx";
 
 export default function About() {
   return (
@@ -49,6 +52,18 @@ export default function About() {
           I absolutely love my workspace as a place that inspires me to do my
           best work, so I thought I’d share it with you:
         </p>
+        <img
+          srcSet={`${workspaceImageMobile} 320w, ${workspaceImageDesktop} 640w`}
+          src={workspaceImageDesktop}
+          alt="image of Paulina's desk setup"
+        />
+        <p>
+          I hope this blog not only documents my growth but also helps others
+          see that coding can be for everyone. Thanks for joining me on this
+          journey!
+        </p>
+        <h4>Follow me</h4>
+        <SocialLinks />
       </PageHeader>
       <Footer />
     </>
