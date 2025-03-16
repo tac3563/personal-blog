@@ -1,5 +1,5 @@
 import React, { JSX, useEffect, useState } from "react";
-import NavBar from "../NavBar/NavBar.tsx";
+import NavBar from "../Nav/NavBar/NavBar.tsx";
 import "./Layout.scss";
 
 interface LayoutProps {

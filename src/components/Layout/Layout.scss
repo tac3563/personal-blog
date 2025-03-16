@@ -20,6 +20,10 @@
     transition: border-color .3s ease-in-out;
     border-top: none;
     padding: $spacing-200 $spacing-150 $spacing-100;
-    margin: 0 $spacing-150 0;
+    margin: 0 $spacing-250 0;
+
+    @media(min-width: 768px) {
+      margin: 0 $spacing-150 0;
+    }
   }
 }
