@@ -2,6 +2,11 @@
 @use "typography" as *;
 @use "spacing" as *;
 
+::selection {
+  background-color: var(--intro-social-icon-foreground);
+  color: var(--intro-social-icon-background);
+}
+
 body {
   margin: 0;
 }
@@ -22,7 +27,7 @@ blockquote {
 code {
   border-radius: $radius-12;
   background-color: rgba(27, 31, 35, 0.05);
-  padding: 2px 4px;
+  padding: $spacing-025 $spacing-050;
   font-family: monospace;
   color: #e06c75;
 }
@@ -33,7 +38,7 @@ table {
 
   tr {
     th, td {
-      padding: 6px 12px 8px;
+      padding: $spacing-075 $spacing-150 $spacing-100;
     }
 
     th {
@@ -96,6 +101,7 @@ li, p, a {
 
 a {
   text-decoration: none;
+
   &:hover {
     text-decoration: underline solid var(--blue-500) 3px;
   }

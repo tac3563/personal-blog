@@ -22,7 +22,7 @@
     padding: $spacing-200 $spacing-150 $spacing-100;
     margin: 0 $spacing-050 0;
 
-    @media(min-width: 768px) {
+    @media(min-width: $media-md) {
       margin: 0 $spacing-100 0;
     }
   }

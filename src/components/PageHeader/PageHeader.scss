@@ -7,7 +7,35 @@
   padding: 0 0 $spacing-400 0;
   transition: border-bottom-color ease .3s;
 
-  h2, p {
+  .page-header-title-wrapper {
+    position: relative;
+    width: fit-content;
+
+    .page-header-title {
+      z-index: 1;
+      position: relative;
+    }
+
+    .has-style-underline, .has-style-side-rule {
+      background-color: var(--blue-500);
+      position: absolute;
+    }
+
+    .has-style-underline {
+      height: 8px;
+      bottom: 3px;
+      width: 100%;
+    }
+
+    .has-style-side-rule {
+      height: 3px;
+      bottom: 8px;
+      width: 40px;
+      right: -60px;
+    }
+  }
+
+  .page-header-title, p {
     margin: 0 0 $spacing-300 0;
   }
 

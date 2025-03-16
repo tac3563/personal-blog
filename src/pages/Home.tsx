@@ -4,7 +4,11 @@ import Footer from "../components/Footer/Footer.tsx";
 export default function Home() {
   return (
     <>
-      <PageHeader hasSocialLinks={true} title="Hi, I'm Paulina 👋">
+      <PageHeader
+        style="underline"
+        hasSocialLinks={true}
+        title="Hi, I'm Paulina👋"
+      >
         <p>
           I’m on a journey to become a front-end web developer. I love building
           little projects, trying out new coding techniques, and sharing what I

@@ -7,7 +7,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks.tsx";
 export default function About() {
   return (
     <>
-      <PageHeader title={"About"}>
+      <PageHeader style="underline" title={"About"}>
         <p>
           Hi, I’m Paulina! Ever since I can remember, I’ve had a passion for
           creativity and problem-solving. That’s what led me to the world of

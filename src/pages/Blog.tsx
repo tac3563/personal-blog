@@ -6,7 +6,7 @@ export default function Blog() {
   return (
     <>
       <main>
-        <PageHeader title="My Articles">
+        <PageHeader style="side-rule" title="My Articles">
           <p>
             Below are all my recent blog posts. Click on any title to read the
             full article.

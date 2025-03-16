@@ -7,7 +7,7 @@
   gap: $spacing-300;
   margin: 0;
 
-  @media (min-width: 768px) {
+  @media (min-width: $media-md) {
 
     margin: 0 $spacing-250 0 0;
   }

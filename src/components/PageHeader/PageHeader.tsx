@@ -6,16 +6,24 @@ interface PageHeaderProps {
   hasSocialLinks?: boolean;
   title: string;
   children?: React.ReactNode | React.ReactNode[];
+  style?: string;
 }
 
 export default function PageHeader({
   hasSocialLinks = false,
   title,
   children,
+  style,
 }: PageHeaderProps) {
   return (
-    <section className="page-header">
-      <h2>{title}</h2>
+    <section className={`page-header`}>
+      <div className="page-header-title-wrapper">
+        <h2 className="page-header-title">{title}</h2>
+
+        {style === "underline" || "side-rule" ? (
+          <span className={`has-style-${style}`}></span>
+        ) : null}
+      </div>
 
       {children}
 
