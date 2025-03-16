@@ -1,0 +1,34 @@
+@use "../../../styles/spacing" as *;
+@use "../../../styles/colours" as *;
+@use "../../../styles/typography" as *;
+
+.hamburger-menu-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: $radius-10;
+  background-color: transparent;
+  margin: 0 $spacing-075 0 0;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &:has(.hamburger-menu-open) {
+    background-color: var(--intro-social-icon-foreground);
+
+    > svg {
+      > path {
+        stroke: var(--intro-social-icon-background);
+      }
+    }
+  }
+
+  > svg {
+    padding: 10px;
+
+    > path {
+      stroke: var(--intro-social-icon-foreground);
+    }
+  }
+}

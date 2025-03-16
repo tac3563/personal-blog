@@ -1,15 +1,17 @@
-interface NavToggle {
+import "./HamburgerMenu.scss";
+
+interface HamburgerMenu {
   isOpen: boolean;
   handleClick: () => void;
 }
 
-export default function NavToggle({ isOpen, handleClick }: NavToggle) {
+export default function HamburgerMenu({ isOpen, handleClick }: HamburgerMenu) {
   return (
-    <div className="nav-hamburger">
+    <div className="hamburger-menu-wrapper">
       {!isOpen && (
         <svg
           onClick={handleClick}
-          className="nav-hamburger-closed"
+          className="hamburger-menu-closed"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"
@@ -29,7 +31,7 @@ export default function NavToggle({ isOpen, handleClick }: NavToggle) {
       {isOpen && (
         <svg
           onClick={handleClick}
-          className="nav-hamburger-open"
+          className="hamburger-menu-open"
           xmlns="http://www.w3.org/2000/svg"
           width="20"
           height="20"

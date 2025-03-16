@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import DesktopMenu from "../DesktopMenu/DesktopMenu.tsx";
 import MobileMenu from "../MobileMenu/MobileMenu.tsx";
-import NavToggle from "../NavToggle/NavToggle.tsx";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu.tsx";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher.tsx";
 
 interface NavBarProps {
@@ -45,11 +45,11 @@ export default function NavBar({ activeMode, handleClick }: NavBarProps) {
             alt="portrait image of Paulina"
           />
 
-          {!isMobileViewport && (
+          {!isMobileViewport ? (
             <DesktopMenu handleNavToggleClick={handleNavToggleClick} />
+          ) : (
+            <HamburgerMenu isOpen={isOpen} handleClick={handleNavToggleClick} />
           )}
-
-          <NavToggle isOpen={isOpen} handleClick={handleNavToggleClick} />
 
           <ThemeSwitcher activeMode={activeMode} handleClick={handleClick} />
         </div>

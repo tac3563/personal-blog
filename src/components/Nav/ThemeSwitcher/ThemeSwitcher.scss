@@ -1,0 +1,13 @@
+@use "../../../styles/spacing" as *;
+@use "../../../styles/colours" as *;
+
+.theme-switcher {
+  cursor: pointer;
+  width: $icon-max-width;
+  height: $icon-max-width;
+  border: solid 1px var(--neutral-200);
+  border-radius: $radius-8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

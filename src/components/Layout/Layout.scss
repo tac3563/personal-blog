@@ -1,7 +1,6 @@
 @use "../../../src/styles/spacing" as *;
 @use "../../../src/styles/colours" as *;
 
-
 .page-container {
   width: 100%;
   margin: auto;
@@ -13,6 +12,7 @@
 
   .page-wrapper {
     max-width: $container-max-width;
+    padding: 0 $spacing-200;
   }
 
   #main-content {
@@ -20,10 +20,10 @@
     transition: border-color .3s ease-in-out;
     border-top: none;
     padding: $spacing-200 $spacing-150 $spacing-100;
-    margin: 0 $spacing-250 0;
+    margin: 0 $spacing-050 0;
 
     @media(min-width: 768px) {
-      margin: 0 $spacing-150 0;
+      margin: 0 $spacing-100 0;
     }
   }
 }

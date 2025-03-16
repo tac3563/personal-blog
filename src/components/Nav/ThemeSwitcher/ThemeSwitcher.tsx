@@ -1,3 +1,5 @@
+import "./ThemeSwitcher.scss";
+
 interface ThemeSwitcherProps {
   activeMode: string;
   handleClick: () => void;
@@ -10,7 +12,7 @@ export default function ThemeSwitcher({
   return (
     <>
       {activeMode === "dark" ? (
-        <div className="light-dark-toggle" onClick={handleClick}>
+        <div className="theme-switcher" onClick={handleClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -28,7 +30,7 @@ export default function ThemeSwitcher({
           </svg>
         </div>
       ) : (
-        <div className="light-dark-toggle" onClick={handleClick}>
+        <div className="theme-switcher" onClick={handleClick}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"

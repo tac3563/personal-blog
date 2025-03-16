@@ -1,0 +1,32 @@
+@use "../../../styles/spacing" as *;
+@use "../../../styles/colours" as *;
+@use "../../../styles/typography" as *;
+
+.desktop-menu {
+  display: flex;
+  gap: $spacing-300;
+  margin: 0;
+
+  @media (min-width: 768px) {
+
+    margin: 0 $spacing-250 0 0;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    a {
+      @include fontStyles('preset-8');
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline 3px var(--blue-500);
+      }
+
+      &.active {
+        text-decoration: underline 3px solid var(--blue-500);
+      }
+    }
+  }
+}

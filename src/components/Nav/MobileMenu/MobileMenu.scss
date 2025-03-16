@@ -1,0 +1,42 @@
+@use "../../../styles/spacing" as *;
+@use "../../../styles/colours" as *;
+@use "../../../styles/typography" as *;
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: $spacing-075 0;
+  gap: 0;
+  background: var(--intro-social-icon-background);
+  border: 1px solid var(--page-border);
+  box-shadow: 0 8px 15px rgba(8, 6, 25, 0.06);
+  border-radius: $radius-10;
+  list-style: none;
+
+  > li {
+    padding: $spacing-075 $spacing-150;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--page-border);
+    }
+
+    > a {
+      @include fontStyles('preset-7');
+      text-decoration: underline solid 1px;
+      text-decoration-color: transparent;
+      transition: .3s ease-in;
+
+      &:hover {
+        text-decoration-color: var(--neutral-700);
+        opacity: .7;
+      }
+
+      &.active {
+        @include fontStyles('preset-6');
+        text-decoration: none;
+        color: var(--neural-900);
+      }
+    }
+  }
+}
