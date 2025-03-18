@@ -3,6 +3,7 @@
 @use "../../../src/styles/typography" as *;
 
 #main-footer {
+  margin-top: auto;
   .footer-wrapper {
     display: flex;
     justify-content: space-between;

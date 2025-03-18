@@ -22,6 +22,12 @@
     padding: $spacing-200 $spacing-150 $spacing-100;
     margin: 0 $spacing-050 0;
 
+    > div {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+    }
+
     @media(min-width: $media-md) {
       margin: 0 $spacing-100 0;
     }
