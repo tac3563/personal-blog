@@ -1,0 +1,87 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
+
+.newsletter-signup-container {
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input[type='text'] {
+      border-radius: $radius-10;
+      background-color: var(--page-nav-background);
+      color: var(--page-body-text);
+      border: 1px solid var(--page-border);
+      padding: $spacing-150 $spacing-200 ;
+      max-height: 48px;
+      margin: $spacing-075 0 $spacing-075;
+      @include fontStyles('preset-7');
+      line-height: 1;
+      cursor: pointer;
+
+      &.has-error {
+       border: 1px solid var(--red-600);
+      }
+
+      &.has-success {
+        border: 1px solid var(--green-700);
+      }
+    }
+
+    input[type='submit'] {
+      padding: $spacing-150 $spacing-300;
+      @include fontStyles('preset-6');
+      line-height: 1;
+      background-color: var(--blue-500);
+      color: var(--neutral-900);
+      border-radius: $radius-10;
+      border: none;
+      width: min-content;
+      margin: 10px 0 0 0;
+      cursor: pointer;
+      transition: background-color .3s ease;
+
+      &:hover {
+        background-color: var(--blue-700);
+      }
+      &:focus {
+        box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #5792C0;
+      }
+    }
+  }
+
+  p {
+    margin: $spacing-100 0 $spacing-200;
+
+    &.message {
+      margin: 0 0 $spacing-075;
+      @include fontStyles('preset-8');
+
+      &.error-message, &.success-message {
+        display: flex;
+        align-items: center;
+        gap: $spacing-075;
+
+        &:before {
+          display: flex;
+        }
+      }
+
+      &.error-message {
+        color: var(--red-600);
+
+        &:before {
+          content: url('src/assets/images/icon-error.svg');
+        }
+      }
+
+      &.success-message {
+        color: var(--green-700);
+
+        &:before {
+          content: url('src/assets/images/icon-success.svg');
+        }
+      }
+    }
+  }
+}

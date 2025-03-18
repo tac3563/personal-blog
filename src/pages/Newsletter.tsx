@@ -1,5 +1,6 @@
 import Footer from "../components/Footer/Footer.tsx";
 import PageHeader from "../components/PageHeader/PageHeader.tsx";
+import NewsletterSignup from "../components/NewsletterSignup/NewsletterSignup.tsx";
 
 export default function Newsletter() {
   return (
@@ -17,6 +18,7 @@ export default function Newsletter() {
           journey!
         </p>
       </PageHeader>
+      <NewsletterSignup />
       <Footer />
     </>
   );

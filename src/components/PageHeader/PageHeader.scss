@@ -2,10 +2,13 @@
 @use "../../../src/styles/colours" as *;
 
 .page-header {
-  border-bottom: solid 1px var(--page-border);
   margin: $spacing-400 0 0;
   padding: 0 0 $spacing-400 0;
   transition: border-bottom-color ease .3s;
+
+  &:not(:has(+ .newsletter-signup-container)) {
+    border-bottom: solid 1px var(--page-border);
+  }
 
   .page-header-title-wrapper {
     position: relative;

@@ -31,7 +31,7 @@ blockquote {
 
     &:after {
       position: absolute;
-      top: $spacing-150;
+      top: 23px;
       left: $spacing-150;
     }
 
@@ -142,7 +142,7 @@ h6 {
   @include fontStyles('preset-6');
 }
 
-li, p, a {
+li, p, a, label {
   @include fontStyles('preset-7');
   color: var(--page-body-text);
   transition: color .3s ease-in-out;
