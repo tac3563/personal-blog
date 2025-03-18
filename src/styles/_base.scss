@@ -22,6 +22,55 @@ blockquote {
   border-left: 4px var(--neutral-400) solid;
   margin-left: 0;
   padding-left: $spacing-300;
+
+  &.warning, &.information, &.tip {
+    border-left: none;
+    position: relative;
+    border-radius: $radius-12;
+    padding: $spacing-250 $spacing-250  $spacing-250 $spacing-500;
+
+    &:after {
+      position: absolute;
+      top: $spacing-150;
+      left: $spacing-150;
+    }
+
+    strong {
+      margin: 0 0 $spacing-075;
+      @include fontStyles('preset-5');
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &.information {
+    background-color: var(--blue-200);
+    border: solid 1px var(--blue-500);
+
+    &:after {
+      content: url("/src/assets/images/icon-info.svg");
+    }
+  }
+
+  &.warning {
+    background-color: var(--yellow-200);
+    border: solid 1px var(--yellow-500);
+
+    &:after {
+      content: url("/src/assets/images/icon-warning.svg");
+    }
+  }
+
+  &.tip {
+    background-color: var(--green-200);
+    border: solid 1px var(--green-500);
+
+    &:after {
+      content: url("/src/assets/images/icon-tip.svg");
+    }
+  }
 }
 
 code {

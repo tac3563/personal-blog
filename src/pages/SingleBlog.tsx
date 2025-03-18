@@ -6,6 +6,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark-dimmed.css";
+import React from "react";
 
 export default function SingleBlog() {
   const { slug } = useParams();
@@ -30,7 +31,47 @@ export default function SingleBlog() {
         <p className="post-meta">{`Published: ${formattedPublishedDate}`}</p>
         <p> {singlePost.description}</p>
       </PageHeader>
-      <Markdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+      <Markdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeHighlight]}
+        components={{
+          blockquote({ children }) {
+            const extractText = (children) => {
+              return React.Children.toArray(children)
+                .map((child) => {
+                  if (typeof child === "string") {
+                    return child;
+                  } else if (React.isValidElement(child)) {
+                    return extractText(child.props.children);
+                  }
+                  return "";
+                })
+                .join("")
+                .trim();
+            };
+
+            const text = extractText(children);
+            let className = "";
+
+            switch (true) {
+              case text.startsWith("Warning:"):
+                className = "warning";
+                break;
+              case text.startsWith("Tip:"):
+                className = "tip";
+                break;
+              case text.startsWith("Caution:"):
+                className = "caution";
+                break;
+              case text.startsWith("Information:"):
+                className = "information";
+                break;
+            }
+
+            return <blockquote className={className}>{children}</blockquote>;
+          },
+        }}
+      >
         {singlePost.content}
       </Markdown>
       <Footer />
