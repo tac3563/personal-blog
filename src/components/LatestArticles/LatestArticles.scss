@@ -1,0 +1,18 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+
+.latest-articles-title {
+  z-index: 1;
+  position: relative;
+  width: fit-content;
+  margin: $spacing-600 0 $spacing-150;
+
+  .has-style-side-rule {
+    background-color: var(--blue-500);
+    position: absolute;
+    height: 3px;
+    bottom: 8px;
+    width: 40px;
+    right: -48px;
+  }
+}

@@ -1,5 +1,6 @@
 import PageHeader from "../components/PageHeader/PageHeader.tsx";
 import Footer from "../components/Footer/Footer.tsx";
+import LatestArticles from "../components/LatestArticles/LatestArticles.tsx";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           my corner of the internet, and thanks for stopping by!
         </p>
       </PageHeader>
+      <LatestArticles />
       <Footer />
     </>
   );

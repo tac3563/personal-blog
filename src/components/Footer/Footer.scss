@@ -4,6 +4,8 @@
 
 #main-footer {
   margin-top: auto;
+  border-top: solid 1px var(--page-border);
+
   .footer-wrapper {
     display: flex;
     justify-content: space-between;
