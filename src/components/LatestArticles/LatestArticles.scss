@@ -1,5 +1,6 @@
 @use "../../../src/styles/spacing" as *;
 @use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
 
 .latest-articles-title {
   z-index: 1;
@@ -14,5 +15,24 @@
     bottom: 8px;
     width: 40px;
     right: -48px;
+  }
+}
+
+.latest-articles-links {
+  .single-blog-links {
+    border-bottom: none;
+    margin: $spacing-300 0 0 0;
+    padding: 0;
+  }
+}
+
+.view-all-btn {
+  text-decoration: underline solid var(--blue-500) 3px;
+  transition: opacity .3s ease;
+  margin: $spacing-400 0 $spacing-600 ;
+  @include fontStyles('preset-6');
+
+  &:hover {
+    opacity: .7;
   }
 }

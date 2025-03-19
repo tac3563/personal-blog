@@ -10,9 +10,11 @@ export default function LatestArticles() {
         Latest Articles<span className="has-style-side-rule"></span>
       </h2>
 
-      {data.slice(0, 5).map((article) => (
-        <BlogCard key={article.slug} {...article} />
-      ))}
+      <div className="latest-articles-links">
+        {data.slice(0, 5).map((article) => (
+          <BlogCard key={article.slug} {...article} />
+        ))}
+      </div>
 
       <Link className="view-all-btn" to="/blog">
         View all articles

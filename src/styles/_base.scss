@@ -156,17 +156,6 @@ a {
   }
 }
 
-.view-all-btn {
-  text-decoration: underline solid var(--blue-500) 3px;
-  transition: opacity .3s ease;
-  margin: 0 0 $spacing-400 ;
-  @include fontStyles('preset-6');
-
-  &:hover {
-    opacity: .7;
-  }
-}
-
 html {
   position: relative;
 
