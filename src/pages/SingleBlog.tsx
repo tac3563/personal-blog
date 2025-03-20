@@ -6,7 +6,9 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark-dimmed.css";
-import React from "react";
+import React, { ReactElement } from "react";
+
+type ChildWithChildren = ReactElement<{ children?: React.ReactNode }>;
 
 export default function SingleBlog() {
   const { slug } = useParams();
@@ -36,13 +38,15 @@ export default function SingleBlog() {
         rehypePlugins={[rehypeHighlight]}
         components={{
           blockquote({ children }) {
-            const extractText = (children) => {
+            const extractText = (children: React.ReactNode): string => {
               return React.Children.toArray(children)
                 .map((child) => {
                   if (typeof child === "string") {
                     return child;
                   } else if (React.isValidElement(child)) {
-                    return extractText(child.props.children);
+                    return extractText(
+                      (child as ChildWithChildren).props.children,
+                    );
                   }
                   return "";
                 })

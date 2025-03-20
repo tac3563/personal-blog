@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./NewsletterSignup.scss";
+import React from "react";
 
 export default function NewsletterSignup() {
   const [email, setEmail] = useState("");
@@ -7,7 +8,7 @@ export default function NewsletterSignup() {
   const [isError, setIsError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     setTimeout(() => {
