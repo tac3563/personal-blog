@@ -1,50 +1,112 @@
-# React + TypeScript + Vite
+Personal Blog site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern blog site built using React, TypeScript, and Vite, deployed on Vercel.
 
-Currently, two official plugins are available:
+📝 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React-Markdown – To render and display markdown content.
 
-## Expanding the ESLint configuration
+React-Router – For seamless client-side navigation.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Framer-Motion – For smooth and interactive animations and page transitions.
 
-- Configure the top-level `parserOptions` property like this:
+SCSS – For modular and maintainable styling.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+🚀 Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the Repository
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+git clone https://github.com/your-repo-name.git
+cd your-repo-name
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+2. Install Dependencies
+
+npm install
+# or
+yarn install
+
+3. Run the Development Server
+
+npm run dev
+# or
+yarn dev
+
+Navigate to http://localhost:5173 to see your app running.
+
+📚 Folder Structure
+
+├── public
+│   └── index.html
+├── src
+│   ├── assets
+│   ├── components
+│   ├── data
+│   ├── pages
+│   ├── styles
+│   ├── App.tsx
+│   └── main.tsx
+├── .eslintrc.cjs
+├── .prettierrc
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
+
+📦 Build and Deploy
+
+1. Create a Production Build
+
+npm run build
+# or
+yarn build
+
+2. Deploy on Vercel
+
+Push your changes to GitHub.
+
+Connect your repository to Vercel.
+
+Set the build command to:
+
+npm run build
+
+Set the output directory to:
+
+dist
+
+🎨 Styling
+
+SCSS is used to handle the styling.
+
+Files are organized under the styles folder.
+
+📖 Markdown Support
+
+react-markdown parses and displays markdown content.
+
+Custom rendering options can be configured if needed.
+
+📚 Routing
+
+React-Router manages routing between different pages. The routes are defined in the Animated Routes component.
+
+💫 Animations
+
+Framer-Motion is used for smooth page transitions and interactive UI effects.
+
+Animations are configured within the individual components. Page transitions are configured in the PageWrapper component.
+
+✅ TypeScript
+
+Ensures type safety and prevents runtime errors.
+
+Interfaces are typically used for prop types and generics for state type safety.
+
+🔄 Future Plans
+
+The current version maps values from a JSON file into blog detail pages as content.
+
+Future updates will transition this to Contentful CMS for dynamic content management.
+
+📄 License
+
+This project is licensed under the MIT License.
