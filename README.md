@@ -1,112 +1,101 @@
-Personal Blog site
+# Personal Blog site
 
 A modern blog site built using React, TypeScript, and Vite, deployed on Vercel.
 
-📝 Features
+--- 
 
-React-Markdown – To render and display markdown content.
+## 📝 Features
 
-React-Router – For seamless client-side navigation.
+- **React-Markdown** – To render and display markdown content.
 
-Framer-Motion – For smooth and interactive animations and page transitions.
+- **React-Router** – For seamless client-side navigation.
 
-SCSS – For modular and maintainable styling.
+- **Framer-Motion** – For smooth and interactive animations and page transitions.
 
-🚀 Getting Started
+- **SCSS** – For modular and maintainable styling.
 
-1. Clone the Repository
+--- 
 
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+``` bash
 git clone https://github.com/your-repo-name.git
 cd your-repo-name
+```
 
-2. Install Dependencies
-
+### 2. Install Dependencies
+```shell
 npm install
-# or
-yarn install
+```
 
-3. Run the Development Server
-
+### 3. Run the Development Server
+```shell
 npm run dev
-# or
-yarn dev
+```
 
 Navigate to http://localhost:5173 to see your app running.
 
-📚 Folder Structure
+---
 
-├── public
-│   └── index.html
-├── src
-│   ├── assets
-│   ├── components
-│   ├── data
-│   ├── pages
-│   ├── styles
-│   ├── App.tsx
-│   └── main.tsx
-├── .eslintrc.cjs
-├── .prettierrc
-├── tsconfig.json
-├── vite.config.ts
-└── package.json
-
-📦 Build and Deploy
+## 📦 Build and Deploy:
 
 1. Create a Production Build
-
 npm run build
-# or
-yarn build
 
-2. Deploy on Vercel
+2. Deploy on Vercel 
 
-Push your changes to GitHub.
+3. Push your changes to GitHub.
 
-Connect your repository to Vercel.
+4. Connect your repository to Vercel.
 
 Set the build command to:
-
+```bash
 npm run build
+```
 
 Set the output directory to:
-
+```nginx
 dist
+```
 
-🎨 Styling
+---
 
-SCSS is used to handle the styling.
+## 🎨 Styling
 
-Files are organized under the styles folder.
+SCSS is used to handle the styling. Global styles as well as variables and mixins are stored in the styles folder
 
-📖 Markdown Support
+Local styles are stored and scoped within the relevant component folder with just the necessary global stylesheets imported.
+
+## 📖 Markdown Support
 
 react-markdown parses and displays markdown content.
 
-Custom rendering options can be configured if needed.
+Custom rendering options can be configured if needed as has been used for custom blockquote styling in this project.
 
-📚 Routing
+## 📚 Routing
 
 React-Router manages routing between different pages. The routes are defined in the Animated Routes component.
 
-💫 Animations
+## 💫 Animations
 
 Framer-Motion is used for smooth page transitions and interactive UI effects.
 
 Animations are configured within the individual components. Page transitions are configured in the PageWrapper component.
 
-✅ TypeScript
+## ✅ TypeScript
 
 Ensures type safety and prevents runtime errors.
 
 Interfaces are typically used for prop types and generics for state type safety.
 
-🔄 Future Plans
+## 🔄 Future Plans
 
 The current version maps values from a JSON file into blog detail pages as content.
 
 Future updates will transition this to Contentful CMS for dynamic content management.
 
-📄 License
+## 📄 License
 
 This project is licensed under the MIT License.
