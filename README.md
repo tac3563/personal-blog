@@ -21,8 +21,8 @@ A modern blog site built using React, TypeScript, and Vite, deployed on Vercel.
 ### 1. Clone the Repository
 
 ``` bash
-git clone https://github.com/your-repo-name.git
-cd your-repo-name
+git clone git@github.com:tac3563/personal-blog.git
+cd pesonal-blog
 ```
 
 ### 2. Install Dependencies
