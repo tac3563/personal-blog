@@ -6,9 +6,7 @@ export default function SingleBlogLinks() {
   return (
     <div className="single-blog-links">
       {data.map((article) => (
-        <>
-          <BlogCard key={article.slug} {...article} />
-        </>
+        <BlogCard key={article.id} {...article} />
       ))}
     </div>
   );
