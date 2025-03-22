@@ -6,26 +6,40 @@
   gap: $spacing-150;
   margin: 0 0 $spacing-200;
 
-  a {
-    display: flex;
-    transition: ease .2s;
+  .social-logo {
+    a {
+      display: flex;
+      transition: ease .2s;
 
-    &:hover {
-      opacity: 0.7;
-    }
+      &:hover {
+        opacity: 0.7;
+      }
 
-    svg {
-      overflow: initial;
+      svg {
+        overflow: initial;
 
-      > path {
-        &:first-of-type {
-          fill: var(--intro-social-icon-background);
-        }
+        > path {
+          &:first-of-type {
+            fill: var(--intro-social-icon-background);
+          }
 
-        &:last-of-type {
-          fill: var(--intro-social-icon-foreground);
+          &:last-of-type {
+            fill: var(--intro-social-icon-foreground);
+          }
         }
       }
+    }
+    &.fe-mentor-logo, &.x-logo {
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border: solid 1px var(--neutral-200);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: ease 0.2s;
+      background: var(--intro-social-icon-background);
     }
   }
 }

@@ -1,0 +1,31 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+
+#main-footer {
+  ul {
+    list-style: none;
+    gap: $spacing-200;
+    display: flex;
+    margin: 0;
+
+    li {
+      a {
+        transition: ease .2s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        svg {
+          max-width: $icon-max-width;
+          width: 100%;
+          height: auto;
+
+          > path {
+            fill: var(--social-icon-background)
+          }
+        }
+      }
+    }
+  }
+}

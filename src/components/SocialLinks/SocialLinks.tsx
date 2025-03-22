@@ -3,7 +3,7 @@ import "./SocialLinks.scss";
 export default function SocialLinks() {
   return (
     <div className="page-header-socials">
-      <div className="x-logo">
+      <div className="x-logo social-logo">
         <a href="https://x.com/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ export default function SocialLinks() {
           </svg>
         </a>
       </div>
-      <div className="github-logo">
+      <div className="github-logo social-logo">
         <a href="https://github.com/" target="_blank">
           <svg
             width="40"
@@ -43,7 +43,7 @@ export default function SocialLinks() {
           </svg>
         </a>
       </div>
-      <div className="linkedin-logo">
+      <div className="linkedin-logo social-logo">
         <a href="https://www.linkedin.com/" target="_blank">
           <svg
             width="40"
@@ -67,7 +67,7 @@ export default function SocialLinks() {
           </svg>
         </a>
       </div>
-      <div className="fe-mentor-logo">
+      <div className="fe-mentor-logo social-logo">
         <a href="https://www.frontendmentor.io/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
