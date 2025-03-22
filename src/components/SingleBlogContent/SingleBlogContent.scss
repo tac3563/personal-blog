@@ -5,8 +5,14 @@
 #main-content {
   > div {
     > #single-blog-content {
+      max-width: 100%;
+
      > p {
-       margin: $spacing-150 0 0 0;
+       margin: $spacing-200 0 0;
+
+       @media(min-width: $media-lg) {
+         margin: $spacing-150 0 0;
+       }
 
         &:first-of-type {
           margin:0;
@@ -14,7 +20,11 @@
       }
 
       table {
-        margin: $spacing-150 0 0 0;
+        margin: $spacing-200 0 0;
+
+        @media(min-width: $media-lg) {
+          margin: $spacing-150 0 0;
+        }
       }
 
       > h1 {
@@ -27,7 +37,11 @@
       }
 
       > h3, h4, h5, h6 {
-        margin: $spacing-150 0 0;
+        margin: $spacing-200 0 0;
+
+        @media(min-width: $media-lg) {
+          margin: $spacing-150 0 0;
+        }
       }
 
       > h3 {
@@ -46,9 +60,70 @@
         @include fontStyles('preset-6');
       }
 
+      .table-wrapper {
+        overflow-x: auto;
+        table {
+          border-radius: $radius-12;
+          border-spacing: 0;
+          width: 100%;
+
+          tr {
+            &:last-child {
+              td {
+                &:first-child {
+                  border-radius: 0 0 0 $radius-12;
+                }
+                &:last-child {
+                  border-radius: 0 0 $radius-12 0;
+                }
+              }
+            }
+
+            &:not(:last-child) {
+              td {
+                border-bottom: 0;
+              }
+            }
+
+            th, td {
+              padding: $spacing-075 18px $spacing-100;
+              white-space: nowrap;
+              word-break: break-word;
+              overflow-wrap: break-word;
+            }
+
+            th {
+              @include fontStyles('preset-6');
+              text-align: left;
+              border-bottom: 0;
+
+              &:first-child {
+                border-radius: $radius-12 0 0 0;
+              }
+
+              &:last-child {
+                border-radius: 0 $radius-12 0 0;
+              }
+            }
+
+            td {
+              @include fontStyles('preset-8');
+            }
+          }
+
+          table, th, td {
+            border: solid 1px var(--neutral-200);
+          }
+        }
+      }
+
       > blockquote {
-        margin: $spacing-150 0 0;
+        margin: $spacing-200 0 0;
         padding-left: $spacing-150;
+
+        @media(min-width: $media-lg) {
+          margin: $spacing-150 0 0;
+        }
 
         > p {
           margin: 0;
@@ -68,13 +143,25 @@
         padding-left: $spacing-250;
 
         > li {
-          margin: $spacing-150 0 0;
+          margin: $spacing-200 0 0;
+
+          @media(min-width: $media-lg) {
+            margin: $spacing-150 0 0;
+          }
         }
       }
 
       > * {
         &:last-child {
-          margin-bottom: $spacing-600;
+          margin-bottom: $spacing-300;
+
+          @media(min-width: $media-md) {
+            margin-bottom: $spacing-400;
+          }
+
+          @media(min-width: $media-lg) {
+            margin-bottom: $spacing-600;
+          }
         }
       }
     }

@@ -56,6 +56,13 @@ export default function SingleBlogContent({
 
             return <blockquote className={className}>{children}</blockquote>;
           },
+          table({ children }) {
+            return (
+              <div className="table-wrapper">
+                <table>{children}</table>
+              </div>
+            );
+          },
         }}
       >
         {singlePostContent}

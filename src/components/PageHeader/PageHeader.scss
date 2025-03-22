@@ -90,13 +90,21 @@
 
     .page-header-title-wrapper {
       .page-header-title {
-        margin: 0 0 $spacing-150;
+        margin: 0 0 $spacing-200;
+
+        @media(min-width: $media-md) {
+          margin: 0 0 $spacing-150;
+        }
       }
     }
     .post-meta {
       @include fontStyles('preset-8');
       font-style: italic;
-      margin: 0 0 $spacing-150;
+      margin: 0 0 $spacing-200;
+
+      @media(min-width: $media-md) {
+        margin: 0 0 $spacing-150;
+      }
     }
   }
 }

@@ -23,7 +23,7 @@ export default function PageHeader({
         <h1 className="page-header-title">{title}</h1>
 
         {style === "underline" || "side-rule" ? (
-          <span className={`has-style-${style}`}></span>
+          <span className={`${style ? "has-style-" + { style } : ""}`}></span>
         ) : null}
       </div>
 
