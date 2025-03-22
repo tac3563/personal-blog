@@ -10,10 +10,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: $spacing-200 0 $spacing-250 0;
+    flex-wrap: wrap;
+    row-gap: $spacing-150;
+    margin: $spacing-200 0 $spacing-100 0;
+
+    @media (min-width: $media-md) {
+      margin: $spacing-200 0 $spacing-150 0;
+    }
+
+    @media (min-width: $media-lg) {
+      margin: $spacing-200 0 $spacing-250 0;
+    }
 
     p {
       margin: 0;
+    }
+
+    ul {
+      padding-left: 0;
     }
 
 

@@ -35,7 +35,7 @@
       &.active {
         @include fontStyles('preset-6');
         text-decoration: none;
-        color: var(--neural-900);
+        color: var(--neutral-900);
       }
     }
   }

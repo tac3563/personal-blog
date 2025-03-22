@@ -5,6 +5,7 @@ interface BlogCardProps {
   slug: string;
   publishedAt: string;
   description: string;
+  showDescription?: boolean;
 }
 
 export default function BlogCard({
@@ -12,6 +13,7 @@ export default function BlogCard({
   slug,
   publishedAt,
   description,
+  showDescription,
 }: BlogCardProps) {
   const formattedDate = new Date(publishedAt).toLocaleDateString("en-US", {
     year: "numeric",
@@ -25,7 +27,9 @@ export default function BlogCard({
         <h2 className="single-blog-links__title">{title}</h2>
       </Link>
       <p className="single-blog-links__date">{formattedDate}</p>
-      <p className="single-blog-links__desc">{description}</p>
+      {showDescription && (
+        <p className="single-blog-links__desc">{description}</p>
+      )}
     </div>
   );
 }

@@ -18,7 +18,7 @@ export default function PageHeader({
   style,
 }: PageHeaderProps) {
   return (
-    <section className={`page-header page-${className}`}>
+    <section className={`page-header ${className ? "page-" + className : ""}`}>
       <div className="page-header-title-wrapper">
         <h1 className="page-header-title">{title}</h1>
 

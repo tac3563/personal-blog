@@ -3,9 +3,13 @@
 @use "../../../src/styles/typography" as *;
 
 .page-header {
-  margin: $spacing-400 0 0;
+  margin: $spacing-200 0 0;
   padding: 0 0 $spacing-400 0;
   transition: border-bottom-color ease .3s;
+
+  @media (min-width: $media-lg) {
+    margin: $spacing-400 0 0;
+  }
 
   &:not(:has(+ .newsletter-signup-container)) {
     border-bottom: solid 1px var(--page-border);
