@@ -1,0 +1,82 @@
+@use "../../../src/styles/spacing" as *;
+@use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
+
+#main-content {
+  > div {
+    > #single-blog-content {
+     > p {
+       margin: $spacing-150 0 0 0;
+
+        &:first-of-type {
+          margin:0;
+        }
+      }
+
+      table {
+        margin: $spacing-150 0 0 0;
+      }
+
+      > h1 {
+        @include fontStyles('preset-2');
+      }
+
+      > h2 {
+        margin: 0;
+        @include fontStyles('preset-2');
+      }
+
+      > h3, h4, h5, h6 {
+        margin: $spacing-150 0 0;
+      }
+
+      > h3 {
+        @include fontStyles('preset-3');
+      }
+
+      > h4 {
+        @include fontStyles('preset-4');
+      }
+
+      > h5 {
+        @include fontStyles('preset-5');
+      }
+
+      > h6 {
+        @include fontStyles('preset-6');
+      }
+
+      > blockquote {
+        margin: $spacing-150 0 0;
+        padding-left: $spacing-150;
+
+        > p {
+          margin: 0;
+
+          > br {
+            margin: 5px 0;
+          }
+        }
+
+        &.tip, &.warning, &.information {
+          padding: $spacing-250 $spacing-250  $spacing-250 $spacing-500;
+        }
+      }
+
+      > ul, > ol {
+        margin: 0;
+        padding-left: $spacing-250;
+
+        > li {
+          margin: $spacing-150 0 0;
+        }
+      }
+
+      > * {
+        &:last-child {
+          margin-bottom: $spacing-600;
+        }
+      }
+    }
+  }
+}

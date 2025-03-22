@@ -26,17 +26,22 @@
       &.has-success {
         border: 1px solid var(--green-700);
       }
+
+      &::placeholder {
+       color: var(--page-body-text);
+      }
     }
 
     input[type='submit'] {
-      padding: $spacing-150 $spacing-300;
+      padding: 0;
       @include fontStyles('preset-6');
       line-height: 1;
       background-color: var(--blue-500);
       color: var(--neutral-900);
       border-radius: $radius-10;
       border: none;
-      width: min-content;
+      width: 158px;
+      height: 51px;
       margin: 10px 0 0 0;
       cursor: pointer;
       transition: background-color .3s ease;
@@ -52,10 +57,10 @@
 
   p {
     margin: $spacing-100 0 $spacing-200;
+    @include fontStyles('preset-8');
 
     &.message {
       margin: 0 0 $spacing-075;
-      @include fontStyles('preset-8');
 
       &.error-message, &.success-message {
         display: flex;

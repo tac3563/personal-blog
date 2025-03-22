@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   transition: ease .2s;
+  background-color: var(--page-background);
 
     &:hover {
       opacity: 0.7;

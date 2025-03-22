@@ -6,7 +6,7 @@ import SocialLinks from "../components/SocialLinks/SocialLinks.tsx";
 export default function About() {
   return (
     <>
-      <PageHeader style="underline" title={"About"}>
+      <PageHeader className="about" style="underline" title={"About"}>
         <AboutContent />
         <SocialLinks />
       </PageHeader>

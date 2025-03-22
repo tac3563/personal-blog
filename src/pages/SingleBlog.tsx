@@ -24,9 +24,8 @@ export default function SingleBlog() {
 
   return (
     <>
-      <PageHeader title={singlePost.title}>
+      <PageHeader className="single-blog" title={singlePost.title}>
         <p className="post-meta">{`Published: ${formattedPublishedDate}`}</p>
-        <p> {singlePost.description}</p>
       </PageHeader>
       <SingleBlogContent singlePostContent={singlePost.content} />
       <Footer />

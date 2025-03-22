@@ -15,7 +15,7 @@ hr {
   border: none;
   border-bottom: solid 1px var(--page-border);
   height: 0;
-  margin: $spacing-300 0;
+  margin: $spacing-400 0;
 }
 
 blockquote {
@@ -31,7 +31,7 @@ blockquote {
 
     &:after {
       position: absolute;
-      top: 23px;
+      top: 26px;
       left: $spacing-150;
     }
 
@@ -82,17 +82,44 @@ code {
 }
 
 table {
-  border-collapse: collapse;
   border-radius: $radius-12;
+  border-spacing: 0;
 
   tr {
+    &:last-child {
+      td {
+        &:first-child {
+
+          border-radius: 0 0 0 $radius-12;
+        }
+        &:last-child {
+          border-radius: 0 0 $radius-12 0;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      td {
+        border-bottom: 0;
+      }
+    }
+
     th, td {
-      padding: $spacing-075 $spacing-150 $spacing-100;
+      padding: $spacing-075 18px $spacing-100;
     }
 
     th {
       @include fontStyles('preset-6');
       text-align: left;
+      border-bottom: 0;
+
+      &:first-child {
+        border-radius: $radius-12 0 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 $radius-12 0 0;
+      }
     }
 
     td {
@@ -140,6 +167,10 @@ h5 {
 
 h6 {
   @include fontStyles('preset-6');
+}
+
+ul {
+  margin: $spacing-300 0;
 }
 
 li, p, a, label {

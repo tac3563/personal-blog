@@ -2,6 +2,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 import React, { ReactElement } from "react";
+import "./SingleBlogContent.scss";
 
 type ChildWithChildren = ReactElement<{ children?: React.ReactNode }>;
 
@@ -13,7 +14,7 @@ export default function SingleBlogContent({
   singlePostContent,
 }: SingleBlogContentProps) {
   return (
-    <>
+    <section id="single-blog-content">
       <Markdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight]}
@@ -59,6 +60,6 @@ export default function SingleBlogContent({
       >
         {singlePostContent}
       </Markdown>
-    </>
+    </section>
   );
 }

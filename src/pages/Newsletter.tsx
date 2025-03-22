@@ -5,7 +5,7 @@ import NewsletterSignup from "../components/NewsletterSignup/NewsletterSignup.ts
 export default function Newsletter() {
   return (
     <>
-      <PageHeader title="Newsletter">
+      <PageHeader className="newsletter" title="Newsletter">
         <p>
           Want to stay updated on my latest articles, coding tutorials, and
           personal adventures? Sign up for my newsletter! It’s a simple way to
@@ -14,8 +14,10 @@ export default function Newsletter() {
           there’s something new to share.
         </p>
         <p>
-          I’d love to have you along for the ride and also hear about your own
-          journey!
+          <strong>
+            I’d love to have you along for the ride and also hear about your own
+            journey!
+          </strong>
         </p>
       </PageHeader>
       <NewsletterSignup />

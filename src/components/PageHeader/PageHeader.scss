@@ -1,5 +1,6 @@
 @use "../../../src/styles/spacing" as *;
 @use "../../../src/styles/colours" as *;
+@use "../../../src/styles/typography" as *;
 
 .page-header {
   margin: $spacing-400 0 0;
@@ -45,6 +46,53 @@
   p {
     &:last-child {
       margin: 0
+    }
+  }
+
+  &.page-about {
+   border-bottom: 0;
+  }
+
+  &.page-blog {
+    padding: 0 0 $spacing-300 0;
+    .page-header-title-wrapper {
+      .page-header-title {
+        margin: 0 0 $spacing-075;
+      }
+    }
+  }
+
+  &.page-newsletter {
+    padding: 0 0 $spacing-250 0;
+
+    .page-header-title-wrapper {
+      .page-header-title {
+        margin: 0 0 $spacing-200;
+      }
+    }
+
+    p {
+      margin: 0 0 $spacing-200;
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &.page-single-blog {
+    border-bottom: none;
+    padding: 0;
+
+    .page-header-title-wrapper {
+      .page-header-title {
+        margin: 0 0 $spacing-150;
+      }
+    }
+    .post-meta {
+      @include fontStyles('preset-8');
+      font-style: italic;
+      margin: 0 0 $spacing-150;
     }
   }
 }
