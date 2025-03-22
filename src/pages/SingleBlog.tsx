@@ -3,7 +3,7 @@ import PageHeader from "../components/PageHeader/PageHeader.tsx";
 import SingleBlogContent from "../components/SingleBlogContent/SingleBlogContent.tsx";
 import { useParams } from "react-router-dom";
 import data from "../data/data.json";
-import "highlight.js/styles/github-dark-dimmed.css";
+// import "highlight.js/styles/github-dark-dimmed.css";
 
 export default function SingleBlog() {
   const { slug } = useParams();

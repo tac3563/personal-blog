@@ -73,14 +73,72 @@ blockquote {
   }
 }
 
+
 code {
+  color: #A138FF;
+}
+
+pre {
   border-radius: $radius-12;
-  background-color: rgba(27, 31, 35, 0.05);
-  padding: $spacing-025 $spacing-050;
-  font-family: monospace;
-  color: #e06c75;
-  word-break: break-word;
-  white-space: pre-wrap;
+  padding: $spacing-150;
+  background-color: var(--neutral-200);
+
+  code.hljs {
+    word-break: break-word;
+    white-space: pre-wrap;
+    font-family: $font-family-fira-code;
+    color: #4B4D65;
+
+   .hljs-keyword {
+     color: var(--red-400);
+   }
+
+    .hjls-comment {
+      color: #4B4D65;
+      opacity: .5;
+    }
+
+    .hljs-title.function_ {
+      color: #A138FF;
+    }
+
+    .hljs-meta {
+      color: var(--red-400);
+
+
+      .hljs-keyword {
+        color: #A138FF;
+      }
+    }
+
+    .hljs-tag {
+      color: var(--red-400);
+      .hljs-name {
+        color: var(--red-400);
+      }
+
+      .hljs-attr {
+        color: #A138FF;
+      }
+
+      .hljs-string {
+        color: #1975FB;
+      }
+    }
+  }
+
+  code.language-js {
+    color: #1975FB;
+
+    .hljs-comment {
+      color: #4B4D65;
+      opacity: .5;
+    }
+
+    .hljs-string {
+      color: #4B4D65;
+    }
+  }
 }
 
 img {
