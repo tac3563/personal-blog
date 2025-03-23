@@ -9,7 +9,7 @@
   margin: $spacing-400 0 $spacing-150;
 
   @media (min-width: $media-lg) {
-    margin: $spacing-600 0 $spacing-150;
+    margin: $spacing-600 0 $spacing-100;
   }
 
   .has-style-side-rule {
@@ -27,6 +27,17 @@
     border-bottom: none;
     margin: $spacing-300 0 0 0;
     padding: 0;
+
+    .single-blog-links__date {
+      margin: 0;
+      font-style: italic;
+      @include fontStyles('preset-8');
+    }
+
+    .single-blog-links__title {
+      @include fontStyles('preset-5');
+      margin: 0 0 $spacing-100;
+    }
   }
 }
 

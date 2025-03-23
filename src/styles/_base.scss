@@ -31,23 +31,26 @@ blockquote {
 
     &:after {
       position: absolute;
-      top: 26px;
+      top: 28px;
       left: $spacing-150;
+      display: flex;
     }
 
     strong {
       margin: 0 0 $spacing-075;
       @include fontStyles('preset-5');
+      color: var(--page-body-heading);
     }
 
     p {
       margin: 0;
+      color: var(--page-body-text);
     }
   }
 
   &.information {
-    background-color: var(--blue-200);
-    border: solid 1px var(--blue-500);
+    background-color: var(--callout-info-background);
+    border: solid 1px var(--callout-info-border);
 
     &:after {
       content: url("/src/assets/images/icon-info.svg");
@@ -55,8 +58,8 @@ blockquote {
   }
 
   &.warning {
-    background-color: var(--yellow-200);
-    border: solid 1px var(--yellow-500);
+    background-color: var(--callout-warning-background);
+    border: solid 1px var(--callout-warning-border);
 
     &:after {
       content: url("/src/assets/images/icon-warning.svg");
@@ -64,8 +67,8 @@ blockquote {
   }
 
   &.tip {
-    background-color: var(--green-200);
-    border: solid 1px var(--green-500);
+    background-color: var(--callout-tip-background);
+    border: solid 1px var(--callout-tip-border);
 
     &:after {
       content: url("/src/assets/images/icon-tip.svg");
@@ -75,70 +78,7 @@ blockquote {
 
 
 code {
-  color: #A138FF;
-}
-
-pre {
-  border-radius: $radius-12;
-  padding: $spacing-150;
-  background-color: var(--neutral-200);
-
-  code.hljs {
-    word-break: break-word;
-    white-space: pre-wrap;
-    font-family: $font-family-fira-code;
-    color: #4B4D65;
-
-   .hljs-keyword {
-     color: var(--red-400);
-   }
-
-    .hjls-comment {
-      color: #4B4D65;
-      opacity: .5;
-    }
-
-    .hljs-title.function_ {
-      color: #A138FF;
-    }
-
-    .hljs-meta {
-      color: var(--red-400);
-
-
-      .hljs-keyword {
-        color: #A138FF;
-      }
-    }
-
-    .hljs-tag {
-      color: var(--red-400);
-      .hljs-name {
-        color: var(--red-400);
-      }
-
-      .hljs-attr {
-        color: #A138FF;
-      }
-
-      .hljs-string {
-        color: #1975FB;
-      }
-    }
-  }
-
-  code.language-js {
-    color: #1975FB;
-
-    .hljs-comment {
-      color: #4B4D65;
-      opacity: .5;
-    }
-
-    .hljs-string {
-      color: #4B4D65;
-    }
-  }
+  color: var(--code-hjls-secondary);
 }
 
 img {
@@ -154,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  @include fontStyles('preset-1');
+  @include fontStyles('preset-2');
 }
 
 h2 {

@@ -42,6 +42,17 @@ body {
   --social-icon-background: var(--neutral-600);
   --intro-social-icon-foreground: var(--neutral-700);
   --intro-social-icon-background: var(--neutral-0);
+  --code-hjls-background: var(--neutral-200);
+  --code-hjls-primary: var(--red-400);
+  --code-hjls-secondary: #A138FF;
+  --code-hjls-tertiary: #1975FB;
+  --code-hjls-neutral: #4B4D65;
+  --callout-info-background: var(--blue-200);
+  --callout-info-border: var(--blue-500);
+  --callout-tip-background: var(--green-200);
+  --callout-tip-border: var(--green-500);
+  --callout-warning-background: var(--yellow-200);
+  --callout-warning-border: var(--yellow-500);
 }
 
 body {
@@ -54,6 +65,17 @@ body {
     --social-icon-background: var(--neutral-400);
     --intro-social-icon-foreground: var(--neutral-0);
     --intro-social-icon-background: var(--neutral-800);
+    --code-hjls-background: var(--neutral-800);
+    --code-hjls-primary: #FC6774;
+    --code-hjls-secondary: #D390F3;
+    --code-hjls-tertiary: #68E0FF;
+    --code-hjls-neutral: var(--neutral-0);
+    --callout-info-background: var(--blue-900);
+    --callout-info-border: var(--blue-500);
+    --callout-tip-background: var(--green-900);
+    --callout-tip-border: var(--green-700);
+    --callout-warning-background: var(--yellow-900);
+    --callout-warning-border: var(--yellow-700);
   }
 }
 

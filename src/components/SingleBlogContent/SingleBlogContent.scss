@@ -96,6 +96,7 @@
               @include fontStyles('preset-6');
               text-align: left;
               border-bottom: 0;
+              color: var(--page-body-heading);
 
               &:first-child {
                 border-radius: $radius-12 0 0 0;
@@ -108,11 +109,12 @@
 
             td {
               @include fontStyles('preset-8');
+              color: var(--page-body-text);
             }
           }
 
           table, th, td {
-            border: solid 1px var(--neutral-200);
+            border: solid 1px var(--page-border);
           }
         }
       }
@@ -135,6 +137,70 @@
 
         &.tip, &.warning, &.information {
           padding: $spacing-250 $spacing-250  $spacing-250 $spacing-500;
+        }
+      }
+
+     > pre {
+        border-radius: $radius-12;
+        padding: $spacing-150;
+        background-color: var(--code-hjls-background);
+
+        code.hljs {
+          word-break: break-word;
+          white-space: pre-wrap;
+          font-family: $font-family-fira-code;
+          color: var(--code-hjls-neutral);
+
+          .hljs-keyword {
+            color: var(--code-hjls-primary);
+          }
+
+          .hjls-comment {
+            color: var(--code-hjls-neutral);
+            opacity: .5;
+          }
+
+          .hljs-title.function_ {
+            color: var(--code-hjls-secondary);
+          }
+
+          .hljs-meta {
+            color: var(--code-hjls-primary);
+
+
+            .hljs-keyword {
+              color: var(--code-hjls-secondary);
+            }
+          }
+
+          .hljs-tag {
+            color: var(--code-hjls-primary);
+
+            .hljs-name {
+              color: var(--code-hjls-primary);
+            }
+
+            .hljs-attr {
+              color: var(--code-hjls-secondary);
+            }
+
+            .hljs-string {
+              color: var(--code-hjls-tertiary);
+            }
+          }
+        }
+
+        code.language-js {
+          color: var(--code-hjls-tertiary);
+
+          .hljs-comment {
+            color: var(--code-hjls-neutral);
+            opacity: .5;
+          }
+
+          .hljs-string {
+            color: var(--code-hjls-neutral);
+          }
         }
       }
 
