@@ -190,6 +190,23 @@
           }
         }
 
+       code.language-css {
+         color: var(--code-hjls-neutral);
+
+         .hljs-comment {
+           color: var(--code-hjls-neutral);
+           opacity: .5;
+         }
+
+         .hljs-attribute {
+           color: var(--code-hjls-tertiary);
+         }
+
+         .hljs-selector-class {
+           color: var(--code-hjls-secondary);
+         }
+       }
+
         code.language-js {
           color: var(--code-hjls-tertiary);
 

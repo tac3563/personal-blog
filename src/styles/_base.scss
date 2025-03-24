@@ -78,7 +78,10 @@ blockquote {
 
 
 code {
-  color: var(--code-hjls-secondary);
+  color: var(--code-hjls-neutral);
+  background-color: var(--code-hjls-background);
+  padding: $spacing-050 $spacing-075;
+  border-radius: $radius-8;
 }
 
 img {
